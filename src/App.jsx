@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import Navbar from "./components/navbar"
-import {initGA} from "./analytics/googleAnalytics"
+import { initGA } from "./analytics/googleAnalytics"
+import Button from './components/button';
 
-import Home from "./components/home";
 
 import './App.css'
 
@@ -11,13 +11,11 @@ function App() {
     initGA();
   }, []);
 
-
-
   return (
     <>
       <Navbar />
-      <Home />
-
+      <div className='h-32'></div>
+      <Button label="Click Me" category="User Interaction" />
     </>
   )
 }
